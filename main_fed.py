@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # Python version: 3.6
 
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
+# import matplotlib
+# matplotlib.use('Agg')
+# import matplotlib.pyplot as plt
 import copy
 import numpy as np
 from torchvision import datasets, transforms
@@ -100,10 +100,10 @@ if __name__ == '__main__':
         loss_train.append(loss_avg)
 
     # plot loss curve
-    plt.figure()
-    plt.plot(range(len(loss_train)), loss_train)
-    plt.ylabel('train_loss')
-    plt.savefig('./save/fed_{}_{}_{}_C{}_iid{}.png'.format(args.dataset, args.model, args.epochs, args.frac, args.iid))
+    # plt.figure()
+    # plt.plot(range(len(loss_train)), loss_train)
+    # plt.ylabel('train_loss')
+    # plt.savefig('./save/fed_{}_{}_{}_C{}_iid{}.png'.format(args.dataset, args.model, args.epochs, args.frac, args.iid))
 
     # testing
     net_glob.eval()
